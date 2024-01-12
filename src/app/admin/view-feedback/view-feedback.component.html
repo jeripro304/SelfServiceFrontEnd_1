@@ -1,0 +1,19 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Customer Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Feedback</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of feedBackData">
+        <!-- <th scope="row">1</th> -->
+        <td> {{i.username}} </td>
+        <td>{{i.email}} </td>
+        <td>{{i.feedbackmsg}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,17 @@
+
+<app-user-nav-bar style="margin-bottom: 20rem;"></app-user-nav-bar>
+
+<div class="msg">
+    <div class="message-container">
+    <h3 style="text-align: center;color:rgb(234,35,41);font-weight: 700;">Message Service</h3>
+        <table>
+            <tr><td> <label for="">From Mobile Number</label>  </td> <td>:</td> <td><input value="{{fromNumber}}" class="inp" type="text" readonly></td> </tr>
+            <tr><td><label for="">To Mobile Number</label> </td> <td>:</td> <td><input required="" class="inp" [(ngModel)]="toNumber" type="text"></td> </tr>
+            <tr><td><label for="">Message</label> </td> <td>:</td> <td><textarea name="" [(ngModel)]="message"  id="" cols="30" rows="10"></textarea> </td> </tr>
+    
+        </table>
+        <i class="fa-solid fa-message" (click)="sendMessage()" style="color: #1f5120;"></i>
+        <h4 style="text-align: center; color: rgb(234,35,41)"> {{usermsg}} </h4>
+    </div>
+
+</div>

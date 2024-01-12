@@ -1,0 +1,112 @@
+.register-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    border-radius: 20px;
+    min-width: none;
+}
+.form-control:hover,
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Change box shadow on hover or focus */
+}
+
+.c-4 {
+    margin: 0;
+}
+
+form{
+    margin-top: 1rem;
+    margin-left: 11rem;
+    width: 40rem;
+    height: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0px rgba(32, 38, 135, .37);
+    border-radius: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+h2{
+    
+    font-weight: 500;
+    color: rgb(234,35,41);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px
+}
+.form-label{
+    padding-left: 10px;
+    font-size: 15px;
+    margin-left: 13%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: rgb(234,35,41);
+}
+.address-label,.form-check-label{
+    padding: 4px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: rgb(234,35,41);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+}
+.btn{
+    width: 40%;
+    margin: auto;
+    margin-top: 0.1rem;
+    margin-left: 1rem;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    background: rgb(255, 0, 8);
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: transparent;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 0.37); 
+}
+
+.btn:hover{
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 0.57);
+}
+
+.reset-reg {
+    
+    width: 40%;
+    margin: auto;
+    margin-top: 0.1rem;
+    margin-left: 1rem;
+    color: rgb(231, 50, 50);
+    font-size: 15px;
+    font-weight: 700;
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 0.1px solid black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 0.37); 
+}
+
+.reset-reg:hover {
+    background-color: rgb(255, 0, 8);
+    color: white;
+}
+
+/* radio buttons for  */
+.service-radio{
+    width: 15rem;
+}
+.service-radio input{
+    color:rgb(255, 0, 8);
+}
+.radio1{
+    margin-left: .5rem;
+}
+.radio2{
+    margin-left: .5rem;
+}

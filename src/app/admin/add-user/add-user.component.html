@@ -1,0 +1,87 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<div class="register-container">
+    <fieldset>
+        <form [formGroup]="adduser"  novalidate class="row g-3">
+            <h2 class="c-4">User Registration</h2>
+            <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">First name</label>
+                <input type="text" formControlName="fname"  class="form-control" id="validationDefault01" value="" required>
+                
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Last name</label>
+                <input type="text" formControlName="lname"  class="form-control" id="validationDefault02" value="" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">Mobile No</label>
+                <div class="input-group">
+                    <input type="text" formControlName="mobileno"   class="form-control" id="validationDefaultUsername"
+                        aria-describedby="inputGroupPrepend2" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" style="margin-left: 0;">Email address</label>
+                <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+            <div>
+                <div class="dob-plan" >
+                    <label class="form-label" style="margin-left: 0;">Date of Birth </label> <br>
+                    <input formControlName="dob" style="padding: 8px;border-radius: 10px;" type="date">
+                    <div class="plan-div">
+                        <div class="col-md-3">
+                            <label for="validationDefault04" class="form-label">Choose Plan</label>
+                            <select formControlName="plan"   class="form-select" id="validationDefault04" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>Plan 399</option>
+                                <option>Plan 599</option>
+                                <option>Plan 699</option>
+                                <option>Plan 899</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label class="address-label" for="exampleFormControlTextarea1">Address</label>
+                <textarea class="form-control" formControlName="address" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault03" class="form-label">City</label>
+                <input type="text" formControlName="city"  class="form-control" id="validationDefault03" required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">State</label>
+                <select formControlName="state"  class="form-select" id="validationDefault04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option  *ngFor="let i of indianStates" > {{i}} </option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">Zip</label>
+                <input type="text" formControlName="zip"  class="form-control" id="validationDefault05" required>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Service</label>
+                <div class="service-radio">
+                    <input class="radio1 radio" formControlName="service"  type="radio" name="service" value="Prepaid"> <label class="form-label" style="margin-left: 0;" >Prepaid</label> 
+                    <input class="radio2 radio" formControlName="service" type="radio" name="service" value="Postpaid"><label class="form-label" style="margin-left: 0;" for="">Postpaid</label>
+                </div>
+              
+            </div>
+            <!-- <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                    </label>
+                </div>
+            </div> -->
+            <div class="col-12">
+                <button class="btn btn-primary" (click)="userRegistration()"  type="submit">Submit form</button>  
+                <input class="reset-reg" type="reset"/>
+            </div>
+        </form>
+    </fieldset>
+</div>

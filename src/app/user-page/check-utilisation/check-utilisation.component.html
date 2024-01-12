@@ -1,0 +1,68 @@
+
+<app-user-nav-bar></app-user-nav-bar>
+
+<div class="cont" style="margin-top: 2rem;">
+  <h3> Check  Utilization</h3>
+<div class="total-container">
+    <div class="tabset">
+   
+    <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+    <label for="tab1">Data</label>
+  
+    <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+    <label for="tab2">Calls</label>
+   
+    <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+    <label for="tab3">SMS</label>
+    
+    <div class="tab-panels">
+      <section id="marzen" class="tab-panel">
+           <div *ngFor="let j of dataUsaeg" class="data-container">
+                <div class="h6">{{j.dataUsed}} GB</div>
+                <div class="data-session">
+                    Session end time : {{j.curTime}}
+                    <span >₹ 0.00</span>
+                </div>
+                <div class="volte">Local 4g</div>
+                <hr>
+           </div>
+      </section>
+      <section id="rauchbier" class="tab-panel">
+        <div *ngFor="let i of callList" >
+            <div class="h6">{{i.toMobile}} </div>
+            <div class="data-session">
+                 09:22 PM LOCAL - 4G
+                <span style="margin-right: 32rem;">₹ 0.00</span>
+            </div>
+            <div class="volte"> {{i.duration}} mm:ss </div>
+            <hr style="width: 470px;">
+       </div> 
+    </section>
+      <section id="dunkles" class="tab-panel">
+        <div *ngFor="let k of msgdata" class="data-container">
+            <div class="h6">+91-{{k.toMobile}} </div>
+            <div class="data-session">
+                {{k.msgTime}} AM LOCAL
+                <span>₹ 0.00</span>
+            </div>
+            <hr>
+            <!-- <div class="volte">1 minute 10 sec</div> -->
+       </div> 
+      </section>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+<!-- <div *ngFor="let i of callList"  >
+  <strong>{{i.duration}} </strong> -->
+  <!-- <div class="h6"> </div>
+  <div class="data-session">
+      09:22 PM LOCAL - 4G
+      <span>₹ 0.00</span>
+  </div>
+  <div class="volte">1 minute 10 sec</div> -->
+<!-- </div>  -->
+  
+  <!-- <p><small>Source: <cite><a href="https://www.bjcp.org/stylecenter.php">BJCP Style Guidelines</a></cite></small></p> -->

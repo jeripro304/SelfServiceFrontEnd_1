@@ -1,0 +1,25 @@
+
+<!-- Phone -->
+<app-user-nav-bar></app-user-nav-bar>
+
+<div class="call-container">
+    <div class="bor">
+        <table>
+            <div class="table-container">
+                <h3 style="font-weight: 600;">Phone Call</h3>
+            <tr><td>From Phno Number </td>   <td>:&nbsp;</td>  <td><input type="text" value="{{mobileno}}" readonly ></td> </tr>
+            <tr><td>To Phno Number</td> <td>:&nbsp;</td> <input type="number" [(ngModel)]="toMobileno"  ></tr>
+            <tr> <td>Date and Time </td> <td>:&nbsp;</td> <input type="text" value="{{date |date:'dd-MM-YYYY'}}" readonly><input type="text" value="{{time}}" readonly> </tr>
+            <tr> <td>Call time </td>  <td>:&nbsp;</td> <td><input type="text" [(ngModel)]="callMin" placeholder="In minutes"  > <input type="text" [(ngModel)]="callSec" placeholder="In seconds" ></td> </tr>
+           
+            </div>
+            <i class="fa-solid fa-phone" style="color: green;" (click)="callSubmit()" ></i>
+            <!-- <input class="" type="submit" value="Call"  (click)="callSubmit()" > -->
+        </table>
+
+    </div>
+    
+</div>
+
+
+<!-- Phone end -->

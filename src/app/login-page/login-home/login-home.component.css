@@ -1,0 +1,133 @@
+.form-control{
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    margin-left: 3rem;
+}
+.login
+.form-control:hover,
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Change box shadow on hover or focus */
+    
+}
+
+.error-text{
+    padding-left: 10px;
+}
+
+
+
+.form{
+    width: 25rem;
+    height: 28rem;
+    margin: auto;
+    background: rgba(95, 157, 229, 0.06);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 8px 32px 0px rgba(32, 38, 135, .37);
+    border-radius: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    
+}
+
+
+h2{
+    margin-top: 20px;
+    color: rgb(234,35,41);
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1rem;
+
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
+    letter-spacing: 2px;
+}
+.form-label{
+    padding-left: 10px;
+    font-size: 15px;
+    margin-left: 13%;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+    font-weight: bold;
+    color: rgb(234,35,41);
+}
+input{
+    margin: auto;
+}
+.otp-button{
+    padding-top: 10px;
+    padding-left: 120px;
+    padding-top: 10px;
+    padding-left: 120px;
+    border-radius: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) ;
+}
+
+.otp-button button {
+    background-color: rgb(225, 116, 120);
+    color: white;
+    font-weight: 600;
+    border: transparent;
+}
+
+.otp-button button:hover {
+    box-shadow: 0 8px 20px 0px rgba(32, 38, 135, .37);
+}
+
+.btn{
+    width: 50%;
+    margin: auto;
+    color: rgb(255, 0, 8);
+    font-size: 15px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 10px 30px;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 0.37); 
+}
+.btn:hover{
+     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 0.57);
+}
+
+.log{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 100px;
+}
+small{
+    padding-left: 50px;
+    font-weight: 700;
+}
+
+.login-btn {
+    margin-left: 1rem;
+    width: 140px;
+}
+
+.login-btn button {
+    width: 100%;
+    background-color: rgb(234,35,41);
+    color: white;
+    font-weight: 600;
+    border: transparent;
+    border-radius: 30px;
+}
+
+.login-btn button:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4) ;
+}
+
+.edit-btn{
+    display: inline-flex;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-right: 50px;
+}
+.input-mno{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}

@@ -1,0 +1,23 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">User Account No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile No</th>
+        <th scope="col">Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of alluser">
+        <!-- <th scope="row">1</th> -->
+        <td> {{i.accNo}} </td>
+        <td> {{i.fname}} {{i.lname}} </td>
+        <td> {{i.email}} </td>
+        <td> {{i.mobileno}} </td>
+        <td>{{i.plan}} </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,38 @@
+<!-- <app-user-nav-bar></app-user-nav-bar> -->
+<div class="navheader">
+ <!-- <app-user-nav-bar></app-user-nav-bar>    -->
+   <a ><h4  style="text-align: center;color: white; font-weight: 700;padding-top: 1rem;" >
+Welcome {{userD.name}} </h4></a>
+</div>
+<div class="feed" style="background-color: white;">
+    <body > 
+
+        <div class="wrap">
+          <div class="feedback" style="background-color: white;">
+            <h1>Feedback Form</h1>
+             <a routerLink="/userhome" style="color: blue;margin-left: 8rem;;">Go to Home Page </a>
+            
+              <div class="row">
+                <input type="text"  [(ngModel)]="username" id="text" class="row_input" required>
+                <label for="text" name="username" class="label">enter you name</label>
+              </div>
+              <div class="row">
+                <input type="email" [(ngModel)]="email" id="email" class="row_input" required>
+                <label for="email"   name="email" class="label">your email address</label>
+              </div>
+              <div class="row">
+                <textarea name="message" [(ngModel)]="feedbackmsg" id="message" class="row_input" cols="30" rows="5" required></textarea>
+                <label for="message"  name="feedbackmsg" class="label">message</label>
+              </div>
+              <div class="row">
+                <div class="button">
+                  <button type="submit" (click)="submitFeedback()">Submit</button>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+            
+        </body>
+</div>
+<!-- <router-outlet></router-outlet> -->

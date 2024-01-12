@@ -1,0 +1,171 @@
+<app-login-header></app-login-header>
+
+<!-- loader animate -->
+<body *ngIf="loader" > 
+    <div class="container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="loading-container">
+            <p><b>Loading</b><span class="dot-animation"><b>...</b></span></p>
+        </div>
+    </div>
+</body>
+
+<div class="register-container">
+    <fieldset>
+        <div class="row g-3">
+            <!-- <h2 class="c-4">User Registration</h2> -->
+            
+
+    
+                <!-- <div class="mb-3">
+                    
+                    <label for="exampleInputEmail1" class="form-label form-label2">Account Number</label>
+                    <div class="input-mno">
+                        <input type="email" class="form-control form-control1" value="{{mobileno}}"  (ngModelChange)="onInputChange($event)" [formControl]="mobileno" [readonly]="isphnoreadonly"
+                            [value]="mobileno" aria-describedby="emailHelp" maxlength="12">
+        
+                        <button class="edit-btn" (click)="toggleEditMode()" *ngIf="isphnoreadonly"><img src="../../../assets/editing.png" alt=""></button>
+                    </div>
+
+                    <div class="error-text">
+                        
+                        <div *ngIf="mobileno.invalid"><small class="text-danger" *ngIf="mobileno.errors?.['pattern']">Enter a
+                                valid Account  Number and should not start with 0</small> </div>
+                                
+                        <div *ngIf="mobileno.touched"><small class="text-danger"
+                                *ngIf="mobileno.errors?.['minlength'] || mobileno.errors?.['maxlength'] ">Account Number should
+                                be of 12 digits</small></div>
+                        </div>
+                        <div *ngIf="otpen" class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">OTP</label>
+                            <input type="text" class="form-control" [formControl]="otpno" id="exampleInputPassword1" maxlength="6">
+                            <div *ngIf="otpno.touched" class="otp-error-text">
+                                <div *ngIf="otpno.invalid && otpno.touched"><small class="text-danger"
+                                        *ngIf="otpno.errors?.['minlength'] || otpno.errors?.['pattern']">otp is invalid</small></div>
+                            </div>
+                            <div class="login-btn">
+                                <a><button type="submit" (click)="loginUser()" class="btn log btn-primary">Login</button></a>
+                            </div>
+                        </div>
+                        <div class="otp-button">
+                            <button type="submit" class="btn btn-primary otp button"  *ngIf="!otpen" 
+                                [style.backgroundColor]="mobileno.valid?'rgb(234,35,41)':''" [disabled]="mobileno.invalid"
+                                (click)="enableotp()">Send OTP</button>
+                        </div>
+                    </div> -->
+                            
+                
+
+                    <!-- from the login component -->
+                    <!-- <div class="spinner-border text-primary" *ngIf="loader" role="status" >
+                        <span class="visually-hidden">Loading...</span>
+                      </div> -->
+
+                      
+
+
+                    <div *ngIf="!loader" class="login-formcontainer form" style="margin: auto;">
+
+    
+                        <div class="mb-3">
+                            <h2>User Registration</h2>
+                            <label for="exampleInputEmail1" class="form-label">Account Number</label>
+                            <div class="input-mno">
+                                <input type="email" class="form-control"  value="{{mobileno}}" [formControl]="mobileno" [readonly]="isphnoreadonly"
+                                    [value]="mobileno" aria-describedby="emailHelp" maxlength="12">
+                
+                                <button class="edit-btn" (click)="toggleEditMode()" *ngIf="isphnoreadonly"><img src="../../../assets/editing.png" alt=""></button>
+                
+                            </div>
+                            
+                            <div class="error-text">
+                                <div *ngIf="mobileno.invalid"><small class="text-danger" style="margin-top: -1rem;" *ngIf="mobileno.errors?.['pattern']">Enter a
+                                        valid Phone Number</small> </div>
+                                <div *ngIf="mobileno.touched"><small class="text-danger"
+                                        *ngIf="mobileno.errors?.['minlength'] || mobileno.errors?.['maxlength'] ">Mobile Number should
+                                        be of 10 numbers</small></div>
+                                <div class="dispmsg  text-danger" ><small>{{userdisplaymessage}}</small></div>
+                                <div class="dispmsg  text-danger" ><small>{{otpsentmsg}}</small></div>                                
+                            </div>
+                            <a *ngIf="otpen && enablesendotp" (click)="enableotp()" style="float: right;margin-right: 4rem;color:blue;font-weight: 600;border: 1px solid blue;
+                                    background-color: white;  padding: 5px;border-radius: 10px;cursor: pointer;">Resend Otp</a>
+                        </div>
+                        <div *ngIf="otpen" class="mb-3">
+                            <label *ngIf="enablesendotp"  for="exampleInputPassword1" class="form-label">OTP</label>
+                            <input *ngIf="enablesendotp" type="text" class="form-control" [formControl]="otpno" id="exampleInputPassword1" maxlength="6">
+                            <div *ngIf="otpno.touched" class="otp-error-text">
+                                <div *ngIf="otpno.invalid && otpno.touched"><small class="text-danger"
+                                        *ngIf="otpno.errors?.['minlength'] || otpno.errors?.['pattern']">otp is invalid</small></div>
+                            </div>
+                            <div *ngIf="enablesendotp" class="login-btn">
+                                <a><button type="submit" (click)="loginUser()"  class="btn log btn-primary">Sign Up</button></a>
+                            </div>
+                        </div>
+                        <div class="otp-button">
+                            <button type="submit" class="btn btn-primary"  *ngIf="!otpen"
+                                [style.backgroundColor]="mobileno.valid?'rgb(234,35,41)':''" [disabled]="mobileno.invalid"
+                                (click)="enableotp()">Send OTP</button>
+                        </div>
+                    
+                </div>
+            
+            <!-- <div class="col-md-4">
+                <label for="validationDefault01" class="form-label form-label1">Account Number</label>
+                <input type="text" class="form-control form-control1" id="validationDefault01" value="" required>
+            </div> -->
+
+
+            <!-- <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationDefault02" value="" required>
+            </div> -->
+
+
+
+            <!-- <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">Mobile No</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="validationDefaultUsername"
+                        aria-describedby="inputGroupPrepend2" required>
+                </div>
+            </div> -->
+
+
+            <!-- <div class="form-group">
+                <label class="address-label" for="exampleFormControlTextarea1">Address</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault03" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationDefault03" required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">State</label>
+                <select class="form-select" id="validationDefault04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationDefault05" required>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                    </label>
+                </div>
+            </div> -->
+
+            <!-- submit and reset button -->
+            <!-- <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+                <input class="reset-reg" type="reset"/>
+            </div> -->
+        </div>
+    </fieldset>
+</div>

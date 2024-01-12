@@ -1,0 +1,86 @@
+
+<body >
+    <div style="background-color: white;" class="white-container">
+        <header class="wrapper-inner">
+            <div class="header-bg">
+                <div class="header-content">
+                    <div class="logo">
+                        <!-- <img src="img/tmp_7ad90ead-3493-4e0f-8f02-f94139901849.png" /> -->
+                        <h1>ProSync</h1>
+                    </div>
+                    <div class="logout">
+                        <button (click)="logout()" ><i class="fa fa-sign-out"></i> Go to Home Page</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <nav class="navigation">
+            <div class="nav-border">
+                <div class="details">
+                    <ul>
+                        <li class="welcome">
+                            <p class="nav-head">Welcome,</p>
+                            <span class="nav-body">{{userdata.name}} </span>
+                        </li>
+                        <li class="mobile-no">
+                            <p class="nav-head">Mobile No:</p>
+                            <span class="nav-body">{{userdata.mobileno}} </span>
+                        </li>
+                        <li class="email-id">
+                            <p class="nav-head">ACCOUNT NO:</p>
+                            <span class="nav-body">{{userdata.acccountno}} </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 4rem;" class="paynow">
+                <div #paymentRef  style="width: 200px;">
+    
+                </div>
+                <!-- <button class="paynow" [ngClass]="{'faded-button':paybtn}"  [disabled]="paybtn" (click)="paynow()"  >Pay Now</button> -->
+            </div>
+            
+    
+        </nav>
+    
+        <main class="content-body">
+            <div class="content">
+                <div class="pack-details-header">
+                    <h2>Pack Details</h2>
+                </div>
+                <div class="pack-details-body">
+                    <div class="pack-details-button">
+                        <!-- <button>Change Plan</button>
+                        <button>Add Data</button> -->
+                    </div>
+                    <div class="pack-name">
+                        <p>PACK NAME : <span>₹{{userdata.planAmount}}_POST_TELE</span></p><span class="count">₹{{userdata.planAmount}}</span>
+                    </div>
+                </div>
+                <div class="due-date">
+                    <p>DUE DATE : <span>{{userdata.nextDueDate}} </span></p>
+                </div>
+                <div class="pack-info">
+                    <p>PACK INFO :</p>
+                    <div class="pack-info-details">
+                        <p class="a">DATA :</p><span class="a1" > {{userdata.toatalGB}} GB </span>
+                        <!-- <p class="b">CALLS :</p><span class="b1">Unlimited</span>
+                        <p class="c">MESSAGES :</p><span class="c1">100/day</span> -->
+                        <p class="b">PREVIOUS BILL  :</p><span class="b1">{{userdata.previousAmount |currency:'INR'}} </span>
+                        <p class="c">PENALT :</p><span class="c1">{{userdata.penalt|currency:'INR'}} </span>
+    
+                        <p class="d">CURRENT CHARGES :</p><span class="d1">{{userdata.totalBillAmount|currency:'INR'}} </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <footer class="footer">
+        </footer>
+
+    </div>
+    
+
+</body>
+

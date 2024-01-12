@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1250px;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+.header-bg {
+    margin: 0 auto;
+    background-color: #fd2329;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    height: 100px
+}
+
+.header-content {
+    display: flex
+}
+
+.logo {
+    margin-top: 15px;
+    margin-left: 30px;
+    display: flex
+}
+
+.logo h1 {
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 20px
+}
+
+.content-heading {
+    margin: 100px 0 0 100px;
+    font-size: 30px
+}
+
+.logout button {
+    margin: 30px 0 0 800px;
+    padding: 10px 25px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #fff
+}
+
+.logout button:hover {
+    background-color: #ffa395
+}
+
+.navigation {
+    display: flex
+}
+
+.nav-border {
+    margin: 16px 0 0 16px;
+    border: 1px solid #a2868a;
+    border-radius: 25px
+}
+
+.details ul {
+    display: flex
+}
+
+.details ul li {
+    list-style: none;
+    margin: 30px 0 0 75px;
+    padding: 0 75px 30px 0
+}
+
+.nav-head {
+    font-size: 20px;
+    color: #a2868a
+}
+
+.nav-body {
+    font-size: 22.5px;
+    font-weight: 700;
+    color: #fd2329
+}
+
+.paynow {
+    margin: 20px 0 0 50px
+}
+
+.paynow button {
+    padding: 20px 45px;
+    border-radius: 5px;
+    border: transparent;
+    color: #fff;
+    background-color: #419641
+}
+
+.paynow button:hover {
+    background-color: #6f8f6f
+}
+
+.pack-details-header {
+    margin: 20px 0 10px 16px;
+    color: #a2868a
+}
+
+.pack-details-body {
+    width: 910px;
+    padding: 16px;
+    border: 1px solid #a2868a;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin: 0 0 0 16px
+}
+
+.pack-details-button button {
+    height: 30px;
+    width: 100px;
+    border: transparent;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #419641
+}
+
+.pack-details-button button:hover {
+    background-color: #6f8f6f
+}
+
+.pack-name {
+    margin-top: 10px
+}
+
+.pack-name p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fd2329
+}
+
+.pack-name p span {
+    font-weight: 500;
+    color: #a2868a
+}
+
+.count {
+    margin-top: -35px;
+    color: #419641;
+    font-size: 30px;
+    font-weight: 700;
+    float: right
+}
+
+.due-date {
+    width: 910px;
+    padding: 16px;
+    border: 1px solid #a2868a;
+    margin: 0 0 0 16px;
+    border-top: none
+}
+
+.due-date p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fd2329
+}
+
+.due-date p span {
+    font-weight: 500;
+    color: #a2868a
+}
+
+.pack-info {
+    width: 910px;
+    padding: 16px;
+    border: 1px solid #a2868a;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 0 0 0 16px;
+    border-top: none
+}
+
+.pack-info p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fd2329
+}
+
+.pack-info-details p {
+    font-weight: 500;
+    color: #a2868a
+}
+
+.pack-info-details span {
+    float: right;
+    margin-top: -29.5px;
+    font-size: 20px
+}
+
+.a {
+    margin-left: 250px
+}
+
+.b {
+    margin-left: 156px
+}
+
+.c {
+    margin-left: 225px;
+}
+
+.d {
+    margin-left: 108px;
+}
+
+.a1 {
+    margin-right: 490px
+}
+
+.b1 {
+    margin-right: 490.5px
+}
+
+.c1 {
+    margin-right: 490.5px
+}
+
+.d1 {
+    margin-right: 490px
+}
+
+.footer {
+    margin-top: 16px;
+    height: 63px;
+    background-color: #fd2329;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px
+}
+
+/* fading of button when it is disabled */
+.faded-button {
+    opacity: 0.4; /* You can adjust the opacity value as needed */
+    pointer-events: none; /* This prevents interaction with the button when disabled */
+  }

@@ -1,0 +1,157 @@
+<!-- <div class="usernav-container">
+    <body>
+        <nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user nav-icon"></i>
+                        <span class="nav-text">My Account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-home nav-icon"></i>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping nav-icon"></i>
+                        <span class="nav-text">Pricing</span>
+                    </a>
+                </li>
+                <li>
+                    
+                        <i class="btn btn-primary fa fa-bell nav-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+                        <span class="nav-text">Notification</span>
+                    
+                </li>
+            </ul>
+            <ul class="logout">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out nav-icon"></i>
+                        <span class="nav-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</div>
+
+  Modal -->
+
+  <!-- <main class="wrapper">
+    <header class="content">
+        <label for="">Welcome Username </label>
+        <div class="content-left">
+            <ul>
+                <a routerLink="/userhome"><li>Home</li></a>
+                <a routerLink="/viewplans"><li>View Plans</li></a>
+            </ul>
+        </div>
+        <div class="content-right">
+            <ul>
+                <li class=""><i class="fa btn icon fa-user-circle"></i>
+                    <div class="dropdown-content">
+                        <li><a href="#">My Account</a></li>
+                         <li><a routerLink="/loginpage">Sign Out</a></li>
+                      </div>
+                </li>
+                <li><i class="fa fa-bell btn"  data-bs-toggle="modal" data-bs-target="#exampleModal"></i></li>
+
+            </ul>
+        </div>
+    </header>
+</main>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"  aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Add these lines to include Bootstrap CSS and JavaScript -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script> -->
+
+<main class="wrapper">
+    <header class="content">
+        <label for="">Welcome {{username}} </label>
+        <div class="content-left">
+            <ul>
+                <a routerLink="/userhome"><li>Home</li></a>
+                <a routerLink="/viewplans"><li>View Plans</li></a>
+            </ul>
+        </div>
+        <div class="content-right">
+            <ul>
+                <li class="dropdown"><i class="fa btn icon fa-user-circle"></i>
+                    <div class="dropdown-content">
+                        <li><a routerLink="/userprofile" >My Account</a></li>
+                        <li><a  routerLink="/billHistory" >My Billing History</a> </li>
+                        <li><a routerLink="/call" >Calling </a> </li>
+                        <li> <a routerLink="/message" > Messaging </a> </li>
+                        <li><a routerLink="/feedback" >Feedback  </a> </li>
+                        <li><a (click)="signOut()">Sign Out</a></li>
+                    </div>
+                </li>
+                <!-- Correct the data-bs-toggle and data-bs-target attributes -->
+                <li><i class="fa fa-bell icon2 btn" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></li>
+            </ul>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"  aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- this is accordian -->
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div *ngFor="let i of notification,let j = index"  class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  Notification {{j+1}}   <span style="margin-left: 10rem;">Date : {{i.todayDate}}</span> 
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">{{i.notification}}</div>
+                                <button class="btn-danger" (click)="deleteNotification(i.nid)" style="float:right;background-color:red;color: white; border-radius: 10px;" >Delete</button>
+                              </div>
+                             
+                            </div>
+                            
+                          </div>
+
+                          
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</main>
+
+
+
+
+
+

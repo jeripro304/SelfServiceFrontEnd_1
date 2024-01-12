@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    border: 1px solid red;
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.content {
+    display: flex;
+}
+
+.bill-id {
+    display: flex;
+    margin: 50px 0px 0px 50px;
+}
+
+.bill-id p {
+    font-size: 20px;
+}
+
+.bill-id span {
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.username {
+    display: flex;
+    margin: 10px 0px 0px 50px;
+}
+
+.username p {
+    font-size: 20px;
+}
+
+.username span {
+    margin-top: 0px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.content-right {
+    margin:50px 0px 0px 600px;
+}
+
+.status,.plan {
+    display: flex;
+}
+
+.status p {
+    font-size: 20px;
+}
+
+.status span {
+    font-size: 20px;
+    color: green;
+}
+
+.plan {
+    margin-top: 10px;
+}
+
+.plan p {
+    font-size: 20px;
+}
+
+.plan span {
+    font-size: 20px;
+}
+
+.mid-content {
+    font-size: 20px;
+    margin: 30px 0px 0px 50%;
+}
+
+.mid-content p {
+    margin-top: 10px;
+}
+
+.a {
+    margin-left: 5px;
+}
+
+.b {
+    margin-left: 26.5px;
+}

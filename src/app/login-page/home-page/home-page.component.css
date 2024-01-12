@@ -1,0 +1,35 @@
+body{
+    background-image: url('../../../assets/selfServiceCenter.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.cont{
+    display: inline-block;
+}
+.text{
+    margin: auto;
+    margin-left: 10rem;
+    font-size: 5em;
+    font-weight: 900;
+    /* color:rgb(234,35,41) ; */
+    color: black;
+    letter-spacing: 5px;
+    border-right: 5px solid ;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(27),
+        cursor .4s step-end infinite alternate;
+}
+@keyframes cursor{
+    50% {
+        border-color: transparent;
+    }
+}
+@keyframes typing{
+    from {width: 0;}
+}

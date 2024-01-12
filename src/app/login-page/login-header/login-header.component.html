@@ -1,0 +1,26 @@
+
+<div class="all-container">
+    <div class="header-home">
+      <div class="home-cont">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a routerLink="/adminlogin"><img class="logo" src="../../../assets/broadcast.png" alt="logo"></a><span>ProSync</span> 
+            
+          </div>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 home">Home</a></li>
+            <li><a routerLink="plans" class="nav-link px-2">Plans</a></li>
+            <!-- <li><a href="#" class="nav-link px-2">About</a></li> -->
+          </ul>
+           <!-- (click)="toUser()  this is used to navigate to user home page  --> <!--this is used in login page-->
+          <div class="col-md-3 text-e">  
+            <a><button type="button" routerLink="/login"  class="btn btn-outline-primary me-2" >Login</button></a>
+            <button type="button" routerLink="/signup"   class="btn btn-primary btn-name"  >Sign-up</button>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+
+<router-outlet></router-outlet>

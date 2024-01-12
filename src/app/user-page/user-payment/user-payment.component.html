@@ -1,0 +1,43 @@
+<app-user-nav-bar></app-user-nav-bar>
+<header style="text-align: center;font-weight: 900;margin-left: 15rem;"> <h3>User Bill History</h3> </header>
+<body>
+    <main  class="wrapper" style="background-color: white;border-radius: 25px;">
+        <div *ngFor="let i of billuserdata" class="billcont">
+            <div class="content">
+                <div class="content-left">
+                    <div class="bill-id">
+                        <p>Bill ID : </p>
+                        <span>{{i.billNo}} </span>
+                    </div>
+                    <div class="username">
+                        <p>Username : </p>
+                        <span>{{name}}</span>
+                    </div>
+                    <div class="username">
+                        <p>Date : </p>
+                        <span>{{i.todayDate}}</span>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="status">
+                        <p>Status : </p>
+                        <span style="font-weight: 900;">Paid</span>
+                    </div>
+                    <div class="plan">
+                        <p>Plan : </p>
+                        <span>{{i.planAmount}} $</span>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="mid-content">
+                <p class="a">Previous Amount :{{i.previousAmount}}  </p>
+                <p class="b">Penality added :{{i.penalty}} </p>
+                <p class="c">Total Bill Amount : {{i.totalAmount}} (including GST 18%) </p>
+            </div>
+            <hr style="padding: 0.5rem;margin-top: 2rem;">
+        </div>
+        
+    </main>
+</body>
+

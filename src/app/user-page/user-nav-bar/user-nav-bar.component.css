@@ -1,0 +1,244 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+.modal{
+    justify-content: center;
+    padding: 20px;
+}
+
+nav>ul,
+nav>ul>li {
+    outline: 0;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: transparent;
+}
+
+.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    overflow: hidden;
+    background: rgba(30, 28, 28, 0.6);
+    transition: width .05s linear;
+    -webkit-transition: width .05s linear;
+    z-index: 10;
+    padding-top: 10px;
+}
+
+.main-menu:hover {
+    width: 180px;
+    overflow: visible;
+}
+
+.main-menu>ul>li {
+    position: relative;
+    display: block;
+    width: 180px;
+}
+
+.main-menu>ul>li>a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1rem;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    padding: 10px 0;
+}
+
+.main-menu>ul>li>a:hover {
+    background-color: rgb(234,35,41);
+    color: black;
+}
+
+.nav-icon {
+    width: 60px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-text {
+    width: 120px;
+    height: 20px;
+}
+
+.logout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.icon-container {
+    display: inline-block;
+    /* Ensures the container doesn't collapse 
+/* } 8 */
+
+
+
+* {
+    box-sizing: border-box;
+    /* margin: 0;          this caueses the error in the modal view pop up
+    padding: 0; */
+}
+label{
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    margin-left: 3rem;
+    margin-top: 1.6rem;
+
+}
+
+
+.content {
+    background-color: rgb(234, 35, 41);
+    height: 4.9rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-left, .content-right {
+    display: inline-flex;
+    margin-top: 1rem;
+}
+
+.content-left {
+    margin-left: 25%;
+}
+
+.content-left ul {
+    display: flex;
+}
+
+.content-left ul li {
+    margin-left: 3rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content-right ul {
+    display: flex;
+}
+
+.content-right ul li {
+    margin-right: 3rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content-right {
+    float: right;
+}
+
+
+
+.drop {
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: white;
+    padding-left: 50px;
+}
+
+.drop li {
+    color: black;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.separator {
+    border: 1px solid #312f2c;
+}
+
+.btn {
+    color: white;
+    font-size: 1.7rem;
+    margin-top: .2rem;
+    
+}
+/* Account icon hovering and css */
+.dropdown {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+/* Style for the icon (you can use your own icon here) */
+.icon {
+  font-size: 32px;
+  cursor: pointer;
+}
+.icon2{
+    font-size: 32px;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 13rem;
+  margin-top: 1.rem;
+  margin-left: -6rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 20px;
+
+}
+
+/* Style for the links in the dropdown */
+.dropdown-content a {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  width: 13rem;
+  /* padding: 10px 20px; */
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Style for the links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(84, 208, 253);
+}
+
+/* Show the dropdown content when hovering over the icon */
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}

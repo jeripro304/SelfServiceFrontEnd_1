@@ -1,0 +1,52 @@
+<div class="tot-container">
+    <div class="all-card-container">
+        <div class="flex-conatainer">
+            <div class="user-main-details">
+                <div class="card cardup">
+                <h5 class="card-header">Account holder {{userdata.name}} </h5>
+                    <div class="card-body">
+                    <h5 class="card-title">PostPaid Mobile</h5>
+                    <h4 class="card-title">{{userdata.mobileno}} </h4>
+                    <p class="card-text">Your are Synchronising with the world</p>
+                    </div>
+                </div>
+            </div>
+            <div class="user-main-container">
+                <div class="card">
+                    <div class="card-header-line">
+                        <h5 class="card-header1">Plan {{userdata.planAmount}} <span>expiring in {{userdata.expiringDays}} days</span></h5>
+                    </div>
+                        <div class="card-body">
+                        <h5 class="card-title">Plan cost ₹{{userdata.planAmount}}</h5>
+                    <h5 class="card-title">PostPaid Mobile</h5>
+                    <h4 class="card-title">{{userdata.mobileno}}</h4>
+                    <p class="card-text">Your next billing cycle is  {{userdata.expiryDate}}</p>
+                    <div class="bill-payment">
+                       <a routerLink="/Outstandingbill"> <button >Pay Your Outstanding Bill</button></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="data-check-card">
+            <div class="data-header-line">
+                <h5>Data Usage</h5>
+            </div>
+            <div class="data-usage">
+                <p>{{userdata.availableGB}} GB <span>left of &nbsp; {{userdata.toatalGB}} GB</span></p>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" [style.width.%]="percent">{{percent}}%</div>
+                </div>
+            </div>
+            <div class="data-footer">
+                <div class="check-usage">
+                    <a routerLink="/checkusage"><button> Check Usage</button></a>
+                </div>
+                <!-- <div class="add-data">
+                    <button>Add Data</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+</div>
